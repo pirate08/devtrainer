@@ -1,15 +1,17 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Poetsen_One, Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const poetsenOne = Poetsen_One({
+  variable: '--font-poetsen-one',
   subsets: ['latin'],
+  weight: '400',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const poppins = Poppins({
+  variable: '--font-poppins',
   subsets: ['latin'],
+  weight: ['400', '600'],
 });
 
 export const metadata = {
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-24 px-5`}>
+        className={`${poetsenOne.variable} ${poppins.variable} antialiased bg-[#292929] text-white pt-24 px-5`}>
         <Navbar />
         {children}
       </body>
